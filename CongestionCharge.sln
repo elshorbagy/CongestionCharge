@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CongestionCharge", "CongestionCharge\CongestionCharge.csproj", "{F8E8283C-F607-4CE4-884F-85842A743ECB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CongestionChargeTests", "CongestionChargeTests\CongestionChargeTests.csproj", "{719C6459-1C54-445F-8591-6E8AED93F228}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F8E8283C-F607-4CE4-884F-85842A743ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8E8283C-F607-4CE4-884F-85842A743ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8E8283C-F607-4CE4-884F-85842A743ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719C6459-1C54-445F-8591-6E8AED93F228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719C6459-1C54-445F-8591-6E8AED93F228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719C6459-1C54-445F-8591-6E8AED93F228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719C6459-1C54-445F-8591-6E8AED93F228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
