@@ -10,9 +10,9 @@ namespace CongestionChargeTests.Helper
         [TestMethod()]
         public void DayRateTest()
         {
-            DateTime dateTime=new DateTime(2019,05,20,7,50,0);
+            DateTime dateTime = new DateTime(2019,05,20,7,50,0);
             
-            Assert.IsTrue(CheckDates.DayRate(dateTime));
+            Assert.IsTrue(DateChecker.IsDayRate(dateTime));
         }
 
         [TestMethod()]
@@ -20,7 +20,7 @@ namespace CongestionChargeTests.Helper
         {
             DateTime dateTime = new DateTime(2019, 05, 20, 6, 50, 0);
 
-            Assert.IsTrue(CheckDates.FreeHours(dateTime));
+            Assert.IsTrue(DateChecker.IsFreeHours(dateTime));
         }
 
         [TestMethod()]
@@ -28,7 +28,7 @@ namespace CongestionChargeTests.Helper
         {
             DateTime dateTime = new DateTime(2019, 05, 26, 6, 50, 0);
 
-            Assert.IsTrue(CheckDates.WeekEnd(dateTime));
+            Assert.IsTrue(DateChecker.IsWeekEnd(dateTime));
         }
     }
 }

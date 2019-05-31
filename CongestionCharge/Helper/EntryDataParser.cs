@@ -18,7 +18,7 @@ namespace CongestionCharge.Helper
             var entryData =new EntryData();
             var rawData = data.Split(' ');
             
-            entryData.Vehicle =(Vehicles) Enum.Parse(typeof(Vehicles), rawData[0].Replace(":","").Trim());
+            entryData.Vehicle =(Vehicle) Enum.Parse(typeof(Vehicle), rawData[0].Replace(":","").Trim());
 
             if (!DateTime.TryParseExact(rawData[1] + " " + rawData[2], "dd/MM/yyyy HH:mm",
                 CultureInfo.InvariantCulture, DateTimeStyles.None, out var enterDate))

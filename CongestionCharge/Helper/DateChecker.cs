@@ -2,7 +2,7 @@
 
 namespace CongestionCharge.Helper
 {
-    public static class CheckDates
+    public static class DateChecker
     {
         public static DateTime ChangeDayTime(DateTime date)
         {
@@ -18,13 +18,13 @@ namespace CongestionCharge.Helper
             return date.Date + newTime;
         }
 
-        public static bool DayRate(DateTime date) =>
+        public static bool IsDayRate(DateTime date) =>
                     date.Hour >= 7 && date.Hour < 12;
         
-        public static bool FreeHours(DateTime date)=>
+        public static bool IsFreeHours(DateTime date)=>
              date.Hour >= 19 || date.Hour < 7;
 
-        public static bool WeekEnd(DateTime date) =>
+        public static bool IsWeekEnd(DateTime date) =>
             date.DayOfWeek == DayOfWeek.Sunday ||
             date.DayOfWeek == DayOfWeek.Saturday;
     }

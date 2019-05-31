@@ -6,7 +6,7 @@ using CongestionCharge.Models;
 
 namespace CongestionCharge
 {
-    public class GetRate
+    public class RateCalculation
     {
         public RateData CurrentRateHours(EntryData entryData)
         {
@@ -68,13 +68,13 @@ namespace CongestionCharge
         {
             DateTime newParkingTime;
 
-            if (CheckDates.WeekEnd(parkingDateTime) ||
-                CheckDates.FreeHours(parkingDateTime)) return;
+            if (DateChecker.IsWeekEnd(parkingDateTime) ||
+                DateChecker.IsFreeHours(parkingDateTime)) return;
 
-            if (CheckDates.DayRate(parkingDateTime))
+            if (DateChecker.IsDayRate(parkingDateTime))
             {
-                newParkingTime = CheckDates.ChangeDayTime(parkingDateTime);
-                rateData.DayRate = entryData.Vehicle == Vehicles.Motorbike ? 1 : 2;
+                newParkingTime = DateChecker.ChangeDayTime(parkingDateTime);
+                rateData.DayRate = entryData.Vehicle == Vehicle.Motorbike ? 1 : 2;
                 if (isEntryDate)                
                     rateData.DayRateSpanTotal = TimeSpan.FromHours(12) - newParkingTime.TimeOfDay;                                    
                 else                                    
@@ -82,8 +82,8 @@ namespace CongestionCharge
             }
             else
             {
-                newParkingTime = CheckDates.ChangeEveningTime(parkingDateTime);
-                rateData.EveningRate = entryData.Vehicle == Vehicles.Motorbike ? 1 : 2.5f;
+                newParkingTime = DateChecker.ChangeEveningTime(parkingDateTime);
+                rateData.EveningRate = entryData.Vehicle == Vehicle.Motorbike ? 1 : 2.5f;
 
                 if (isEntryDate)
                     rateData.EveningRateSpanTotal += TimeSpan.FromHours(19) - newParkingTime.TimeOfDay;

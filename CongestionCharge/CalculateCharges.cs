@@ -7,7 +7,7 @@ namespace CongestionCharge
     {
         public string Charge(string entryData)
         {
-            var getRate = new GetRate();
+            var getRate = new RateCalculation();
             var rateData = getRate.CurrentRateHours(EntryDataParser.FillEntryData(entryData));
             var dayBill = CalculateBill(rateData.DayRateSpanTotal.TotalMinutes, rateData.DayRate);
             var eveningBill = CalculateBill(rateData.EveningRateSpanTotal.TotalMinutes, rateData.EveningRate);

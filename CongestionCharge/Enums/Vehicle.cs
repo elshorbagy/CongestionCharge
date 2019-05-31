@@ -1,6 +1,6 @@
 ﻿namespace CongestionCharge.Enums
 {
-    public enum Vehicles
+    public enum Vehicle
     {        
         Car = 1,
         Van = 2,
